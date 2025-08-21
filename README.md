@@ -2,7 +2,7 @@
 
 A modern, professional portfolio website built with Astro, showcasing my experience as a Platform Security Engineer and Software Engineering Lead.
 
-🌐 **Live Site**: [kamalyoussef.dev](https://kamalyoussef.dev)  
+🌐 **Live Site**: [kyoussef.com](https://kyoussef.com)  
 📧 **Contact**: [LinkedIn](https://www.linkedin.com/in/kamalyoussef/) | [GitHub](https://github.com/kyoussef777)
 
 ## 🎯 About
@@ -58,7 +58,7 @@ This portfolio showcases my professional journey in platform security, DevSecOps
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 20+ 
 - pnpm (recommended) or npm
 
 ### Installation
@@ -167,4 +167,72 @@ Currently pursuing M.S. Computer Science at Georgia Institute of Technology.
 
 ---
 
-Built with ❤️ using [Astro](https://astro.build/) | Based on the [Bear Blog](https://github.com/HermanMartinus/bearblog/) theme
+## 🚀 Deployment
+
+This portfolio is deployed on Cloudflare Pages with automatic CI/CD integration.
+
+### Architecture
+
+View the complete [Architecture Documentation](./docs/architecture.md) for detailed deployment diagrams and infrastructure overview.
+
+### Quick Deploy to Cloudflare Pages
+
+1. **Fork this repository** to your GitHub account
+
+2. **Connect to Cloudflare Pages**:
+   - Go to [Cloudflare Pages](https://pages.cloudflare.com/)
+   - Click "Create a project"
+   - Connect your GitHub account
+   - Select this repository
+
+3. **Configure build settings**:
+   ```
+   Framework preset: Astro
+   Build command: npm run build
+   Build output directory: dist
+   Root directory: /
+   Environment variables: NODE_VERSION = 20
+   ```
+
+4. **Set up custom domain** (optional):
+   - Go to your project settings
+   - Add custom domain: `kyoussef.com`
+   - Configure DNS records as instructed
+
+### Environment Variables
+
+For advanced features, set these environment variables in Cloudflare Pages:
+
+```bash
+NODE_VERSION=20
+NPM_CONFIG_PRODUCTION=false
+```
+
+### GitHub Actions (Optional)
+
+The repository includes GitHub Actions workflows for:
+- **Automated deployments** to Cloudflare Pages
+- **Lighthouse performance audits** on every PR
+- **Security scanning** and dependency updates
+
+To enable GitHub Actions:
+1. Add these secrets to your GitHub repository:
+   - `CLOUDFLARE_API_TOKEN`: Your Cloudflare API token
+   - `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID
+
+### Performance Monitoring
+
+- **Lighthouse CI**: Automated performance testing on every PR
+- **Cloudflare Analytics**: Built-in traffic and performance metrics
+- **Core Web Vitals**: Automatic monitoring of user experience metrics
+
+### Security Features
+
+- **Automatic HTTPS**: SSL/TLS certificates managed by Cloudflare
+- **Security Headers**: Configured via `_headers` file
+- **DDoS Protection**: Built-in Cloudflare protection
+- **WAF Rules**: Web Application Firewall protection
+
+---
+
+Built with ❤️ using [Astro](https://astro.build/) | Deployed on [Cloudflare Pages](https://pages.cloudflare.com/) | Based on the [Bear Blog](https://github.com/HermanMartinus/bearblog/) theme

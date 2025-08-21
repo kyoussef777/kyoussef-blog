@@ -1,0 +1,32 @@
+# Cloudflare Pages Redirects Configuration
+
+# Convenience redirects
+/cv              /about           301
+/resume          /about           301
+/contact         https://www.linkedin.com/in/kamalyoussef/  302
+/linkedin        https://www.linkedin.com/in/kamalyoussef/  302
+/github          https://github.com/kyoussef777             302
+
+# Legacy blog URLs (if migrating from another platform)
+/blog/posts/*    /blog/:splat     301
+/posts/*         /blog/:splat     301
+
+# Professional redirects
+/work            /about           301
+/experience      /about           301
+/portfolio       /projects        301
+
+# Social media redirects
+/social/linkedin https://www.linkedin.com/in/kamalyoussef/  302
+/social/github   https://github.com/kyoussef777             302
+
+# Security - Block access to sensitive files
+/.*              /404             404
+/.env*           /404             404
+/.git/*          /404             404
+/node_modules/*  /404             404
+
+# Trailing slash handling
+/blog/           /blog            301
+/about/          /about           301
+/projects/       /projects        301

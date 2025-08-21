@@ -1,0 +1,91 @@
+name: Lighthouse Performance Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run weekly on Sundays at 12:00 UTC
+    - cron: '0 12 * * 0'
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build site
+      run: npm run build
+      
+    - name: Serve site locally
+      run: |
+        npm run preview &
+        sleep 10
+        
+    - name: Run Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v10
+      with:
+        configPath: './.lighthouserc.json'
+        uploadArtifacts: true
+        temporaryPublicStorage: true
+        
+    - name: Comment PR with Lighthouse results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          
+          // Read Lighthouse results
+          const resultsPath = '.lighthouseci';
+          if (fs.existsSync(resultsPath)) {
+            const files = fs.readdirSync(resultsPath);
+            const manifestFile = files.find(f => f.includes('manifest.json'));
+            
+            if (manifestFile) {
+              const manifest = JSON.parse(fs.readFileSync(path.join(resultsPath, manifestFile), 'utf8'));
+              const summary = manifest[0];
+              
+              const scores = {
+                performance: Math.round(summary.summary.performance * 100),
+                accessibility: Math.round(summary.summary.accessibility * 100),
+                'best-practices': Math.round(summary.summary['best-practices'] * 100),
+                seo: Math.round(summary.summary.seo * 100)
+              };
+              
+              const scoreEmojis = (score) => score >= 90 ? '🟢' : score >= 50 ? '🟡' : '🔴';
+              
+              const comment = [
+                '## 🏠 Lighthouse Performance Report',
+                '',
+                '| Category | Score | Status |',
+                '|----------|-------|--------|',
+                `| Performance | ${scores.performance}/100 | ${scoreEmojis(scores.performance)} |`,
+                `| Accessibility | ${scores.accessibility}/100 | ${scoreEmojis(scores.accessibility)} |`,
+                `| Best Practices | ${scores['best-practices']}/100 | ${scoreEmojis(scores['best-practices'])} |`,
+                `| SEO | ${scores.seo}/100 | ${scoreEmojis(scores.seo)} |`,
+                '',
+                `[📊 View full report](${summary.url})`
+              ].join('\\n');
+              
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: comment
+              });
+            }
+          }

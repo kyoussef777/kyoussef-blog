@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "./scripts/deploy.sh",
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
