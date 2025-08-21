@@ -44,6 +44,36 @@ This method will:
 - Use interactive authentication if needed
 - Work with existing Cloudflare Pages projects
 
+### Wrangler Configuration Errors
+
+**Error**: "Unexpected fields found" or "Configuration file for Pages projects does not support"
+
+**Problem**: wrangler.toml contains fields not supported by Cloudflare Pages projects.
+
+**Solution**: Use the simplified Pages-compatible wrangler.toml:
+
+```toml
+# Cloudflare Pages Configuration
+name = "kyoussef-blog"
+compatibility_date = "2024-08-21"
+
+# Pages configuration
+pages_build_output_dir = "dist"
+
+# Environment configuration for Pages
+[env.production]
+route = "kyoussef.com/*"
+
+[env.preview]
+route = "preview.kyoussef.com/*"
+```
+
+**Important Notes**:
+- Pages only supports `production` and `preview` environments (not `staging`)
+- `build` section is not supported in Pages projects
+- Headers and redirects must be in separate `_headers` and `_redirects` files
+- Build environment variables are set in Cloudflare Pages dashboard, not wrangler.toml
+
 ### Missing pages_build_output_dir Error
 
 **Error**: "missing the 'pages_build_output_dir' field, required by Pages"
