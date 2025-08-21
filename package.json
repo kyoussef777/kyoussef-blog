@@ -9,6 +9,7 @@
     "astro": "astro",
     "deploy": "./scripts/deploy.sh",
     "deploy:simple": "./scripts/deploy-simple.sh",
+    "deploy:config": "./scripts/deploy-config.sh",
     "check": "astro check"
   },
   "dependencies": {

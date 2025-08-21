@@ -13,9 +13,9 @@ if [ ! -d "dist" ]; then
     npm run build
 fi
 
-# Deploy using wrangler pages publish (simpler method)
+# Deploy using wrangler pages deploy (updated command)
 echo "☁️  Deploying to Cloudflare Pages..."
-npx wrangler pages publish dist
+npx wrangler pages deploy dist --project-name=kyoussef-blog
 
 echo "🎉 Deployment completed!"
 echo "🌐 Your site should be available shortly."

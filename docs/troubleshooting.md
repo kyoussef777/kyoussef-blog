@@ -171,20 +171,35 @@ npm list -g --depth=0
 
 ## Quick Deployment Methods
 
-### Method 1: Simple Deployment (Recommended for troubleshooting)
+### Method 1: Config-Based Deployment (Recommended)
+
+```bash
+npm run deploy:config
+```
+Uses settings from `wrangler.toml` automatically.
+
+### Method 2: Simple Deployment with Project Name
 
 ```bash
 npm run deploy:simple
 ```
+Explicitly specifies the project name.
 
-### Method 2: Manual Deployment
+### Method 3: Full Deployment Script
+
+```bash
+npm run deploy
+```
+Complete deployment with all checks.
+
+### Method 4: Manual Steps
 
 ```bash
 npm run build
-npx wrangler pages publish dist
+npx wrangler pages deploy dist --project-name=kyoussef-blog
 ```
 
-### Method 3: Via Cloudflare Dashboard
+### Method 5: Via Cloudflare Dashboard
 
 1. Build locally: `npm run build`
 2. Go to Cloudflare Pages dashboard
