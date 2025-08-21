@@ -18,6 +18,9 @@ watch_dir = "src"
 NODE_VERSION = "20"
 NPM_CONFIG_PRODUCTION = "false"
 
+# Pages configuration
+pages_build_output_dir = "dist"
+
 # Headers configuration for security and performance
 [[headers]]
 for = "/*"

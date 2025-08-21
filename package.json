@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "./scripts/deploy.sh",
+    "deploy:simple": "./scripts/deploy-simple.sh",
     "check": "astro check"
   },
   "dependencies": {

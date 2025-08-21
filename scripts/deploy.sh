@@ -33,7 +33,7 @@ npm run build
 
 # Deploy using Wrangler
 echo "☁️  Deploying to Cloudflare Pages..."
-npx wrangler pages deploy dist --project-name=kamal-youssef-portfolio
+npx wrangler pages deploy dist --project-name=kyoussef-blog
 
 echo "🎉 Deployment completed successfully!"
 echo "🌐 Your site will be available at: https://kyoussef.com"
