@@ -1,0 +1,105 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Projects - ${SITE_TITLE}`} description="Explore Kamal Youssef's GitHub projects and technical contributions" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>My Projects</h1>
+			
+			<section class="projects-intro">
+				<p>
+					Here are the projects from my GitHub repository, showcasing my experience in modern web development, 
+					TypeScript, and full-stack application development. Each project demonstrates different aspects of my technical expertise.
+				</p>
+			</section>
+
+			<section class="projects-grid">
+				<div class="project-card">
+					<div class="project-image">
+						<img src="/api/placeholder/400/250" alt="Hebrews Coffee Next.js" />
+					</div>
+					<div class="project-content">
+						<h3>Hebrews Coffee Next.js</h3>
+						<p>
+							A modern coffee shop website built with Next.js and TypeScript, featuring responsive design 
+							and optimized performance. Deployed on Vercel with a clean, professional interface.
+						</p>
+						<div class="project-tech">
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">Next.js</span>
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">Vercel</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/kyoussef777/hebrews-coffee-nextjs" target="_blank" class="project-link">View on GitHub</a>
+							<a href="https://hebrews-coffee-nextjs.vercel.app" target="_blank" class="project-link">Live Demo</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<div class="project-image">
+						<img src="/api/placeholder/400/250" alt="St Marks Feteer Next.js" />
+					</div>
+					<div class="project-content">
+						<h3>St Marks Feteer Next.js</h3>
+						<p>
+							A restaurant website built with Next.js and TypeScript, showcasing modern web development 
+							practices and responsive design. Features clean UI/UX and fast loading times.
+						</p>
+						<div class="project-tech">
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">Next.js</span>
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">Vercel</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/kyoussef777/st-marks-feteer-nextjs" target="_blank" class="project-link">View on GitHub</a>
+							<a href="https://st-marks-feteer-nextjs.vercel.app" target="_blank" class="project-link">Live Demo</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<div class="project-image">
+						<img src="/api/placeholder/400/250" alt="St Marks Fiteer Python" />
+					</div>
+					<div class="project-content">
+						<h3>St Marks Fiteer (Python)</h3>
+						<p>
+							A Python-based project forked and customized for restaurant management. Built with Python 
+							and licensed under MIT, demonstrating backend development and open-source contribution skills.
+						</p>
+						<div class="project-tech">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">MIT License</span>
+							<span class="tech-tag">Open Source</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/kyoussef777/st-marks-fiteer" target="_blank" class="project-link">View on GitHub</a>
+							<a href="https://github.com/kyoussef777/st-marks-fiteer" target="_blank" class="project-link">Documentation</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="github-stats">
+				<h2>GitHub Activity</h2>
+				<p>
+					Visit my <a href="https://github.com/kyoussef777" target="_blank">GitHub profile</a> to see more projects, 
+					contributions, and open-source work. I'm always working on something new!
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
