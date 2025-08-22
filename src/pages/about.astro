@@ -3,12 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import LinkedInBg from '../assets/linkedin-bg.png';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn more about Kamal Youssef's experience in platform security engineering and software development" />
+		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn more about Kamal Youssef's experience in platform security engineering and software development" image={LinkedInBg} />
 	</head>
 	<body>
 		<Header />
