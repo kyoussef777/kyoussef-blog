@@ -69,9 +69,63 @@ import HeaderLink from './HeaderLink.astro';
 	.social-links a {
 		display: flex;
 	}
-	@media (max-width: 720px) {
+	@media (max-width: 768px) {
+		nav {
+			flex-wrap: wrap;
+			padding: 0.5em 0;
+		}
+		
+		h2 {
+			flex: 1;
+			min-width: 200px;
+		}
+		
+		.internal-links {
+			order: 3;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin-top: 0.5rem;
+		}
+		
+		.internal-links a {
+			padding: 0.5em;
+			font-size: 0.9rem;
+		}
+		
 		.social-links {
-			display: none;
+			display: flex;
+			gap: 0.5rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		header {
+			padding: 0 0.5em;
+		}
+		
+		h2 {
+			font-size: 0.9em;
+		}
+		
+		.internal-links {
+			gap: 0.25rem;
+		}
+		
+		.internal-links a {
+			padding: 0.4em 0.3em;
+			font-size: 0.8rem;
+		}
+		
+		.social-links {
+			gap: 0.25rem;
+		}
+		
+		.social-links svg {
+			width: 24px;
+			height: 24px;
 		}
 	}
 </style>

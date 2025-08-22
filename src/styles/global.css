@@ -127,12 +127,26 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
+		line-height: 1.6;
 	}
 	main {
-		padding: 1em;
+		padding: 1em 0.5em;
+		width: 100%;
+	}
+	h1 {
+		font-size: 2.2em;
+	}
+	h2 {
+		font-size: 1.8em;
+	}
+	h3 {
+		font-size: 1.5em;
+	}
+	h4 {
+		font-size: 1.25em;
 	}
 }
 
@@ -411,25 +425,145 @@ hr {
 	flex-shrink: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+	.hero {
+		padding: 2rem 0;
+		margin-bottom: 2rem;
+	}
+	
 	.hero h1 {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
+		line-height: 1.2;
+	}
+	
+	.hero h2 {
+		font-size: 1.2rem;
+	}
+	
+	.hero-description {
+		font-size: 1rem;
+		padding: 0 1rem;
+	}
+	
+	.headshot {
+		width: 150px;
+		height: 150px;
 	}
 	
 	.skills-grid {
 		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	
+	.skill-category {
+		padding: 1rem;
 	}
 	
 	.projects-grid {
 		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	
+	.project-card {
+		margin: 0 0.5rem;
 	}
 	
 	.cta-links {
 		flex-direction: column;
 		align-items: center;
+		gap: 0.75rem;
+	}
+	
+	.cta-button {
+		width: 100%;
+		max-width: 250px;
+		text-align: center;
 	}
 	
 	.project-links {
 		flex-direction: column;
+		gap: 0.75rem;
+	}
+	
+	.project-link {
+		text-align: center;
+	}
+	
+	.degree-header {
+		flex-direction: column;
+		text-align: center;
+		gap: 0.5rem;
+	}
+	
+	.cert-grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	
+	.certification {
+		padding: 1rem;
+	}
+	
+	.about-preview, .skills, .cta {
+		margin-bottom: 2rem;
+	}
+	
+	.intro, .job, .degree, .activity {
+		padding: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 14px;
+	}
+	
+	main {
+		padding: 0.5em 0.25em;
+	}
+	
+	.hero {
+		padding: 1.5rem 0;
+	}
+	
+	.hero h1 {
+		font-size: 1.8rem;
+	}
+	
+	.hero h2 {
+		font-size: 1rem;
+	}
+	
+	.hero-description {
+		font-size: 0.9rem;
+	}
+	
+	.headshot {
+		width: 120px;
+		height: 120px;
+	}
+	
+	.skill-category, .project-card, .certification {
+		padding: 0.75rem;
+	}
+	
+	.projects-grid {
+		margin: 0;
+	}
+	
+	.project-card {
+		margin: 0;
+	}
+	
+	blockquote {
+		padding: 0 0 0 15px;
+		font-size: 1.1em;
+	}
+	
+	pre {
+		padding: 1em;
+		font-size: 0.85em;
+		overflow-x: auto;
 	}
 }

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pythonBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#306998;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD43B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#pythonBg)"/>
+  
+  <!-- Python logo inspired design -->
+  <path d="M150 100 Q150 80 170 80 L230 80 Q250 80 250 100 L250 140 Q250 160 230 160 L170 160 Q150 160 150 140 Z" fill="#306998"/>
+  <path d="M150 160 Q150 180 170 180 L230 180 Q250 180 250 160 L250 120 Q250 100 230 100 L170 100 Q150 100 150 120 Z" fill="#FFD43B"/>
+  
+  <!-- Eyes -->
+  <circle cx="180" cy="110" r="8" fill="white"/>
+  <circle cx="220" cy="150" r="8" fill="white"/>
+  <circle cx="183" cy="107" r="3" fill="black"/>
+  <circle cx="217" cy="153" r="3" fill="black"/>
+  
+  <!-- Code brackets -->
+  <text x="120" y="140" fill="white" font-family="monospace" font-size="40" font-weight="bold">{</text>
+  <text x="270" y="140" fill="white" font-family="monospace" font-size="40" font-weight="bold">}</text>
+  
+  <!-- Title -->
+  <text x="200" y="40" text-anchor="middle" fill="white" font-family="serif" font-size="22" font-weight="bold">St Marks Fiteer</text>
+  <text x="200" y="230" text-anchor="middle" fill="white" font-family="sans-serif" font-size="14">Python • Backend</text>
+</svg>
