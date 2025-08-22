@@ -1,7 +1,7 @@
 ---
 title: 'Building Secure Infrastructure: My Journey in DevSecOps'
 description: 'Insights from implementing security guardrails across cloud infrastructure at enterprise scale'
-pubDate: 'Jan 15 2024'
+pubDate: 'Jan 15 2025'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 

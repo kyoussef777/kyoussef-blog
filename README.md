@@ -154,9 +154,9 @@ This site is optimized for performance:
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👨‍💼 About Kamal Youssef
+## 👨‍💼 Kamal Youssef
 
-Platform Security Engineer & Software Engineering Lead with expertise in:
+Platform Security Engineer with expertise in:
 - 🔒 DevSecOps and Infrastructure Security
 - ☁️ AWS Cloud Architecture and Automation  
 - 👥 Engineering Team Leadership

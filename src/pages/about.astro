@@ -13,51 +13,78 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>About Kamal Youssef</h1>
+			<h1 class="">About Me</h1>
 			
 			<section class="intro">
-				<p>
-					I'm a Platform Security Engineer and Software Engineering Lead with a passion for building secure, scalable solutions. 
-					Currently pursuing my M.S. in Computer Science at Georgia Institute of Technology, I combine academic learning with 
-					hands-on industry experience to drive innovation in security and automation.
-				</p>
+				<div class="intro-content">
+					<div class="intro-text">
+						<p>
+							I'm a Platform Security Engineer and Software Engineering Lead specializing in DevSecOps, infrastructure security, 
+							and cloud automation. My expertise lies in building secure, scalable infrastructure while integrating security 
+							into every layer of the development lifecycle.
+						</p>
+						<p>
+							Currently pursuing my M.S. in Computer Science at Georgia Institute of Technology, I combine academic research 
+							with hands-on industry experience to drive innovation in security automation and infrastructure resilience.
+						</p>
+					</div>
+					<div class="intro-stats">
+						<div class="stat">
+							<span class="stat-number">$18M+</span>
+							<span class="stat-label">Cost Savings Delivered</span>
+						</div>
+						<div class="stat">
+							<span class="stat-number">90%</span>
+							<span class="stat-label">Security Guardrails Implemented</span>
+						</div>
+						<div class="stat">
+							<span class="stat-number">150+</span>
+							<span class="stat-label">Engineers Trained</span>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<section class="experience">
 				<h2>Professional Experience</h2>
 				
 				<div class="job">
-					<h3>Software Engineering Lead - Merck (2023-2025)</h3>
+					<div class="job-header">
+						<div>
+							<h3>Platform Security Engineer & Software Engineering Lead</h3>
+							<p class="company">Merck & Co. | 2021 - 2025</p>
+						</div>
+						<div class="job-icon">🔒</div>
+					</div>
 					<p>
-						Leading a team of 10 software engineers in delivering 20+ strategic IT projects focused on GenAI integration 
-						and AWS Cloud Modernization. Our work has realized approximately $18M in hard savings through innovative 
-						applications and automation solutions.
+						Leading security-first infrastructure initiatives and DevSecOps transformation across enterprise cloud environments. 
+						Architecting secure, scalable solutions while building and mentoring high-performing engineering teams.
 					</p>
-					<ul>
-						<li>Spearheading development of business-critical applications using NodeJS with modern AWS architecture</li>
-						<li>Implementing CI/CD best practices with EKS deployment and comprehensive testing strategies</li>
-						<li>Mentoring team members and preparing them for enterprise-level challenges</li>
-					</ul>
-				</div>
-
-				<div class="job">
-					<h3>DevSecOps Engineer - Merck (2022)</h3>
-					<p>
-						Focused on integrating security into the development lifecycle through Infrastructure as Code scanning 
-						and vulnerability management improvements.
-					</p>
-					<ul>
-						<li>Integrated open-source IAC scanner tools, implementing ~90% of missing security guardrails</li>
-						<li>Improved internal secret scanning tools, increasing vulnerability remediation by 30%</li>
-						<li>Developed operational dashboards and trained 150+ cloud engineering community members</li>
-					</ul>
-				</div>
-
-				<div class="job">
-					<h3>Solutions Architect & Developer - Merck (2021)</h3>
-					<p>
-						Designed and implemented CI/CD platforms for RPA OCR automation solutions using Azure and AWS services.
-					</p>
+					<div class="achievements">
+						<h4>Key Achievements</h4>
+						<ul>
+							<li><strong>Security Infrastructure:</strong> Implemented infrastructure-as-code security scanning, achieving 90% coverage of critical security guardrails across AWS environments</li>
+							<li><strong>DevSecOps Leadership:</strong> Built and scaled DevSecOps practices, improving vulnerability remediation by 30% through automated scanning and policy enforcement</li>
+							<li><strong>Cloud Architecture:</strong> Designed and deployed secure EKS clusters with comprehensive CI/CD pipelines, container security, and network segmentation</li>
+							<li><strong>Team Leadership:</strong> Led 10+ engineers across 20+ strategic projects, delivering $18M+ in cost savings through automation and security optimization</li>
+							<li><strong>Knowledge Transfer:</strong> Trained 150+ cloud engineers on security best practices, threat modeling, and secure development lifecycle</li>
+						</ul>
+					</div>
+					<div class="tech-stack">
+						<h4>Technologies</h4>
+						<div class="tech-tags">
+							<span class="tech-tag">AWS</span>
+							<span class="tech-tag">Kubernetes</span>
+							<span class="tech-tag">Terraform</span>
+							<span class="tech-tag">Docker</span>
+							<span class="tech-tag">Jenkins</span>
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">Github Actions</span>
+							<span class="tech-tag">Snyk</span>
+							<span class="tech-tag">Splunk</span>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -82,13 +109,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
+			<section class="hobbies">
+				<h2>Beyond Code</h2>
+				<div class="hobbies-grid">
+					<div class="hobby">
+						<div class="hobby-icon">🏃‍♂️</div>
+						<h4>Running</h4>
+						<p>Training for marathons and half-marathons. Running keeps me focused and provides mental clarity for solving complex technical challenges.</p>
+					</div>
+					<div class="hobby">
+						<div class="hobby-icon">🏓</div>
+						<h4>Pickleball</h4>
+						<p>Competitive player who enjoys the strategic thinking and quick reflexes required. Great for building teamwork skills that translate to engineering collaboration.</p>
+					</div>
+					<div class="hobby">
+						<div class="hobby-icon">🏠</div>
+						<h4>Home Lab</h4>
+						<p>Built a comprehensive home lab for experimenting with network security, hosting applications, and automation. Features VLANs, firewalls, monitoring systems, and self-hosted services.</p>
+					</div>
+				</div>
+				<br />
+			</section>
+
 			<section class="leadership">
-				<h2>Leadership & Community</h2>
+				<h2>Community Leadership</h2>
 				<div class="activity">
-					<h3>Egyptian IT Community (Discord) - Co-founder</h3>
+					<div class="activity-header">
+						<div class="activity-icon">💬</div>
+						<div>
+							<h3>Egyptian IT Community (Discord) - Co-founder</h3>
+							<p class="activity-meta">300+ Members | International Collaboration</p>
+						</div>
+					</div>
 					<p>
-						Established and manage a 300+ member Discord community for IT and CS professionals and students, 
-						fostering networking and collaboration on international projects.
+						Established and manage a thriving Discord community for IT and CS professionals and students, 
+						fostering networking, knowledge sharing, and collaboration on international projects. Focus on 
+						mentoring junior developers and sharing security best practices.
 					</p>
 				</div>
 			</section>
