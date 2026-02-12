@@ -444,6 +444,56 @@ hr {
 	margin-top: 0.25rem;
 }
 
+/* ==================== Career Progression ==================== */
+.career-progression {
+	margin: 1.5rem 0;
+	border-left: 2px solid rgba(var(--gray-light), 0.8);
+	padding-left: 1.5rem;
+}
+
+.role {
+	position: relative;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid rgba(var(--gray-light), 0.5);
+}
+
+.role:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.role::before {
+	content: '';
+	position: absolute;
+	left: -1.85rem;
+	top: 0.35rem;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--accent);
+	border: 2px solid white;
+}
+
+.role h4 {
+	color: var(--accent);
+	margin-bottom: 0.15rem;
+	font-size: 1.05rem;
+}
+
+.role-dates {
+	font-size: 0.82rem;
+	color: rgb(var(--gray));
+	margin: 0 0 0.5rem 0;
+}
+
+.role p:last-child {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
 /* ==================== Experience / Jobs ==================== */
 section.experience,
 section.education,
