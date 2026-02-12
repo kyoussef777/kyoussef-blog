@@ -9,34 +9,34 @@ import LinkedInBg from '../assets/linkedin-bg.png';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn more about Kamal Youssef's experience in platform security engineering and software development" image={LinkedInBg} />
+		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn more about Kamal Youssef's experience in site reliability engineering and platform infrastructure" image={LinkedInBg} />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1 class="">About Me</h1>
-			
+
 			<section class="intro">
 				<div class="intro-content">
 					<div class="intro-text">
 						<p>
-							I'm a Platform Security Engineer and Software Engineering Lead specializing in DevSecOps, infrastructure security, 
-							and cloud automation. My expertise lies in building secure, scalable infrastructure while integrating security 
-							into every layer of the development lifecycle.
+							I'm a Senior Site Reliability Engineer specializing in building and operating resilient, large-scale distributed systems.
+							My expertise lies in platform engineering, infrastructure automation, and driving operational excellence through SRE
+							best practices — from defining SLOs to building self-healing infrastructure.
 						</p>
 						<p>
-							Currently pursuing my M.S. in Computer Science at Georgia Institute of Technology, I combine academic research 
-							with hands-on industry experience to drive innovation in security automation and infrastructure resilience.
+							Currently pursuing my M.S. in Computer Science at Georgia Institute of Technology, I combine academic research
+							with hands-on industry experience to push the boundaries of infrastructure reliability and performance at scale.
 						</p>
 					</div>
 					<div class="intro-stats">
 						<div class="stat">
-							<span class="stat-number">$18M+</span>
-							<span class="stat-label">Cost Savings Delivered</span>
+							<span class="stat-number">99.99%</span>
+							<span class="stat-label">Platform Uptime Achieved</span>
 						</div>
 						<div class="stat">
-							<span class="stat-number">90%</span>
-							<span class="stat-label">Security Guardrails Implemented</span>
+							<span class="stat-number">$18M+</span>
+							<span class="stat-label">Cost Savings Delivered</span>
 						</div>
 						<div class="stat">
 							<span class="stat-number">150+</span>
@@ -48,27 +48,28 @@ import LinkedInBg from '../assets/linkedin-bg.png';
 
 			<section class="experience">
 				<h2>Professional Experience</h2>
-				
+
 				<div class="job">
 					<div class="job-header">
 						<div>
-							<h3>Platform Security Engineer & Software Engineering Lead</h3>
-							<p class="company">Merck & Co. | 2021 - 2025</p>
+							<h3>Senior Site Reliability Engineer</h3>
+							<p class="company">Merck & Co. | 2021 - Present</p>
 						</div>
-						<div class="job-icon">🔒</div>
+						<div class="job-icon">&#9881;&#65039;</div>
 					</div>
 					<p>
-						Leading security-first infrastructure initiatives and DevSecOps transformation across enterprise cloud environments. 
-						Architecting secure, scalable solutions while building and mentoring high-performing engineering teams.
+						Driving reliability and operational excellence across enterprise cloud platforms. Designing, building, and operating
+						large-scale Kubernetes infrastructure while establishing SRE culture, incident management processes, and observability standards.
 					</p>
 					<div class="achievements">
 						<h4>Key Achievements</h4>
 						<ul>
-							<li><strong>Security Infrastructure:</strong> Implemented infrastructure-as-code security scanning, achieving 90% coverage of critical security guardrails across AWS environments</li>
-							<li><strong>DevSecOps Leadership:</strong> Built and scaled DevSecOps practices, improving vulnerability remediation by 30% through automated scanning and policy enforcement</li>
-							<li><strong>Cloud Architecture:</strong> Designed and deployed secure EKS clusters with comprehensive CI/CD pipelines, container security, and network segmentation</li>
-							<li><strong>Team Leadership:</strong> Led 10+ engineers across 20+ strategic projects, delivering $18M+ in cost savings through automation and security optimization</li>
-							<li><strong>Knowledge Transfer:</strong> Trained 150+ cloud engineers on security best practices, threat modeling, and secure development lifecycle</li>
+							<li><strong>Platform Reliability:</strong> Architected and maintained highly available EKS clusters serving mission-critical workloads, achieving 99.99% uptime through robust SLO-driven practices</li>
+							<li><strong>Observability & Monitoring:</strong> Built comprehensive observability stacks with Prometheus, Grafana, and Datadog — enabling proactive alerting, SLI tracking, and faster incident resolution</li>
+							<li><strong>Infrastructure as Code:</strong> Designed and implemented Terraform-based infrastructure automation achieving 90% IaC coverage, with automated drift detection and policy enforcement</li>
+							<li><strong>Incident Management:</strong> Established blameless postmortem culture and incident response frameworks, reducing MTTR by 40% through runbook automation and on-call best practices</li>
+							<li><strong>Team Leadership:</strong> Led 10+ engineers across 20+ strategic projects, delivering $18M+ in cost savings through capacity optimization, right-sizing, and automation</li>
+							<li><strong>Knowledge Sharing:</strong> Trained 150+ cloud engineers on SRE best practices, toil reduction strategies, and reliability-first development patterns</li>
 						</ul>
 					</div>
 					<div class="tech-stack">
@@ -78,11 +79,13 @@ import LinkedInBg from '../assets/linkedin-bg.png';
 							<span class="tech-tag">Kubernetes</span>
 							<span class="tech-tag">Terraform</span>
 							<span class="tech-tag">Docker</span>
-							<span class="tech-tag">Jenkins</span>
+							<span class="tech-tag">Helm</span>
+							<span class="tech-tag">ArgoCD</span>
+							<span class="tech-tag">Prometheus</span>
+							<span class="tech-tag">Grafana</span>
+							<span class="tech-tag">Datadog</span>
 							<span class="tech-tag">Python</span>
-							<span class="tech-tag">Node.js</span>
-							<span class="tech-tag">Github Actions</span>
-							<span class="tech-tag">Snyk</span>
+							<span class="tech-tag">GitHub Actions</span>
 							<span class="tech-tag">Splunk</span>
 						</div>
 					</div>
@@ -114,19 +117,19 @@ import LinkedInBg from '../assets/linkedin-bg.png';
 				<h2>Beyond Code</h2>
 				<div class="hobbies-grid">
 					<div class="hobby">
-						<div class="hobby-icon">🏃‍♂️</div>
+						<div class="hobby-icon">&#127939;</div>
 						<h4>Running</h4>
-						<p>Training for marathons and half-marathons. Running keeps me focused and provides mental clarity for solving complex technical challenges.</p>
+						<p>Training for marathons and half-marathons. The discipline of distance running mirrors SRE — steady pacing, monitoring your metrics, and pushing through when things get tough.</p>
 					</div>
 					<div class="hobby">
-						<div class="hobby-icon">🏓</div>
+						<div class="hobby-icon">&#127955;</div>
 						<h4>Pickleball</h4>
-						<p>Competitive player who enjoys the strategic thinking and quick reflexes required. Great for building teamwork skills that translate to engineering collaboration.</p>
+						<p>Competitive player who thrives on quick decision-making and strategic play. The fast reflexes translate well to incident response and real-time problem solving.</p>
 					</div>
 					<div class="hobby">
-						<div class="hobby-icon">🏠</div>
+						<div class="hobby-icon">&#128421;</div>
 						<h4>Home Lab</h4>
-						<p>Built a comprehensive home lab for experimenting with network security, hosting applications, and automation. Features VLANs, firewalls, monitoring systems, and self-hosted services.</p>
+						<p>Running a full home infrastructure lab with VLANs, firewalls, Proxmox clusters, and self-hosted monitoring stacks. My personal playground for testing SRE tools and chaos engineering experiments.</p>
 					</div>
 				</div>
 				<br />
@@ -136,16 +139,16 @@ import LinkedInBg from '../assets/linkedin-bg.png';
 				<h2>Community Leadership</h2>
 				<div class="activity">
 					<div class="activity-header">
-						<div class="activity-icon">💬</div>
+						<div class="activity-icon">&#128172;</div>
 						<div>
 							<h3>Egyptian IT Community (Discord) - Co-founder</h3>
 							<p class="activity-meta">300+ Members | International Collaboration</p>
 						</div>
 					</div>
 					<p>
-						Established and manage a thriving Discord community for IT and CS professionals and students, 
-						fostering networking, knowledge sharing, and collaboration on international projects. Focus on 
-						mentoring junior developers and sharing security best practices.
+						Established and manage a thriving Discord community for IT and CS professionals and students,
+						fostering networking, knowledge sharing, and collaboration on international projects. Focus on
+						mentoring junior engineers in SRE practices, cloud architecture, and reliability engineering.
 					</p>
 				</div>
 			</section>
@@ -169,7 +172,7 @@ import LinkedInBg from '../assets/linkedin-bg.png';
 					</div>
 					<div class="certification">
 						<div class="cert-placeholder">
-							<span>🎓</span>
+							<span>&#127891;</span>
 						</div>
 						<div>
 							<h4>SDI: Language of Leadership Program</h4>
